@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdmiRegBot | UAM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo-futurista.png" alt="Logo UAM Futurista" class="logo">
+        <h1>AdmiRegBot 🤖</h1>
+        <p>Asistente virtual de Admisiones y Registro Académico</p>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>¡Hola! Soy AdmiRegBot 🤖</h2>
+            <p>Estoy aquí para ayudarte en los procesos de <strong>homologación</strong> y <strong>validación del inglés</strong>.</p>
+            <p>Puedo brindarte orientación sobre el <strong>Reglamento General Estudiantil</strong> y la información de la <strong>página oficial de la UAM</strong>.</p>
+            <div class="botones">
+                <button onclick="showInfo('homologacion')">Homologación</button>
+                <button onclick="showInfo('validacion')">Validación</button>
+                <button onclick="showInfo('contacto')">Contacto</button>
+            </div>
+        </section>
+        <section id="info" class="info-section">
+            <p>Selecciona una opción para ver la información.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Universidad Autónoma de Manizales - AdmiRegBot</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
