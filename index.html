@@ -2,35 +2,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdmiRegBot | UAM</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdmiRegBot | UAM</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #004080;
+    }
+    h2 {
+      color: #0066cc;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #004080;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="assets/logo-futurista.png" alt="Logo UAM Futurista" class="logo">
-        <h1>AdmiRegBot 🤖</h1>
-        <p>Asistente virtual de Admisiones y Registro Académico</p>
-    </header>
-    <main>
-        <section class="welcome">
-            <h2>¡Hola! Soy AdmiRegBot 🤖</h2>
-            <p>Estoy aquí para ayudarte en los procesos de <strong>homologación</strong> y <strong>validación del inglés</strong>.</p>
-            <p>Puedo brindarte orientación sobre el <strong>Reglamento General Estudiantil</strong> y la información de la <strong>página oficial de la UAM</strong>.</p>
-            <div class="botones">
-                <button onclick="showInfo('homologacion')">Homologación</button>
-                <button onclick="showInfo('validacion')">Validación</button>
-                <button onclick="showInfo('contacto')">Contacto</button>
-            </div>
-        </section>
-        <section id="info" class="info-section">
-            <p>Selecciona una opción para ver la información.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Universidad Autónoma de Manizales - AdmiRegBot</p>
-    </footer>
-    <script src="js/script.js"></script>
+  <img src="logo.png" alt="Logo UAM Futurista" />
+  <h1>AdmiRegBot 🤖</h1>
+  <h2>Asistente virtual de Admisiones y Registro Académico</h2>
+
+  <p><strong>¡Hola! Soy AdmiRegBot 🤖</strong></p>
+  <p>
+    Estoy aquí para ayudarte en los procesos de <strong>homologación</strong> y <strong>validación del inglés</strong>.
+  </p>
+  <p>
+    Puedo brindarte orientación sobre el <strong>Reglamento General Estudiantil</strong> y la información de la <strong>página oficial de la UAM</strong>.
+  </p>
+
+  <div class="button-container">
+    <button onclick="alert('Información sobre Homologación')">Homologación</button>
+    <button onclick="alert('Información sobre Validación')">Validación</button>
+    <button onclick="alert('Contáctanos a través del correo institucional')">Contacto</button>
+  </div>
+
+  <footer>
+    © 2025 Universidad Autónoma de Manizales - AdmiRegBot
+  </footer>
 </body>
 </html>
