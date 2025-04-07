@@ -2,80 +2,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AdmiRegBot | UAM</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
       text-align: center;
       padding: 40px;
+      margin: 0;
     }
     img {
-      max-width: 150px;
-      margin-bottom: 20px;
+      max-width: 120px;
     }
     h1 {
       font-size: 2.5em;
       color: #004080;
     }
     h2 {
-      color: #0066cc;
-      margin-top: 30px;
+      font-weight: 400;
+      color: #555;
     }
     p {
-      font-size: 1.2em;
-      line-height: 1.6;
+      font-size: 1.1em;
+      color: #333;
       max-width: 600px;
-      margin: 0 auto 20px;
+      margin: 10px auto;
     }
     .button-container {
       margin-top: 20px;
     }
     button {
-      background-color: #0066cc;
+      background: #0066cc;
       color: white;
       border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 8px;
+      padding: 12px 24px;
+      margin: 8px;
+      border-radius: 10px;
       font-size: 1em;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s;
     }
     button:hover {
-      background-color: #004080;
+      background: #004080;
     }
     footer {
-      margin-top: 40px;
+      margin-top: 60px;
       font-size: 0.9em;
-      color: #777;
+      color: #888;
+    }
+
+    /* --- Chatbot Floating Icon --- */
+    #chatbot-icon {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- Chatbot Window --- */
+    #chatbot-window {
+      position: fixed;
+      bottom: 100px;
+      right: 25px;
+      width: 300px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #chatbot-header {
+      background: #004080;
+      color: white;
+      padding: 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    #chatbot-body {
+      padding: 15px;
+      font-size: 0.95em;
+      color: #333;
+      text-align: left;
     }
   </style>
 </head>
 <body>
+
   <img src="logo.png" alt="Logo UAM Futurista" />
   <h1>AdmiRegBot 🤖</h1>
   <h2>Asistente virtual de Admisiones y Registro Académico</h2>
 
   <p><strong>¡Hola! Soy AdmiRegBot 🤖</strong></p>
-  <p>
-    Estoy aquí para ayudarte en los procesos de <strong>homologación</strong> y <strong>validación del inglés</strong>.
-  </p>
-  <p>
-    Puedo brindarte orientación sobre el <strong>Reglamento General Estudiantil</strong> y la información de la <strong>página oficial de la UAM</strong>.
-  </p>
+  <p>Estoy aquí para ayudarte con los procesos de <strong>homologación</strong> y <strong>validación del inglés</strong>.</p>
+  <p>Puedo orientarte sobre el <strong>Reglamento General Estudiantil</strong> y darte información útil sobre la <strong>página oficial de la UAM</strong>.</p>
 
   <div class="button-container">
-    <button onclick="alert('Información sobre Homologación')">Homologación</button>
-    <button onclick="alert('Información sobre Validación')">Validación</button>
-    <button onclick="alert('Contáctanos a través del correo institucional')">Contacto</button>
+    <button onclick="alert('🔄 Homologación: Paso a paso de cómo homologar inglés')">Homologación</button>
+    <button onclick="alert('✅ Validación: Cómo validar tu nivel de inglés')">Validación</button>
+    <button onclick="alert('📬 Contáctanos por correo institucional')">Contacto</button>
   </div>
 
   <footer>
     © 2025 Universidad Autónoma de Manizales - AdmiRegBot
   </footer>
+
+  <!-- Chatbot Icon -->
+  <button id="chatbot-icon" onclick="toggleChat()">💬</button>
+
+  <!-- Chatbot Window -->
+  <div id="chatbot-window">
+    <div id="chatbot-header">AdmiRegBot 🤖</div>
+    <div id="chatbot-body">
+      ¡Hola! 👋 Soy tu asistente virtual.<br><br>
+      ¿Sobre qué tema necesitas ayuda?<br>
+      - Homologación<br>
+      - Validación<br>
+      - Contacto<br><br>
+      Haz clic en los botones del menú para comenzar 😊
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatbot = document.getElementById('chatbot-window');
+      chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
 </body>
 </html>
